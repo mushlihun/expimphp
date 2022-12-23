@@ -1,7 +1,6 @@
 <?php
 
 include_once('config.php');
-
 /*
  * Load Data
  */
@@ -10,7 +9,7 @@ if (count($_GET) > 0) {
         $item = $_GET['item'] ? :'';
         $orderby = $_GET['orderby'] ? :'id';
         session_start();
-        $result = mysqli_query($conn, "SELECT * FROM  phonesdirectory WHERE name LIKE '%$item%' OR phone LIKE '%$item%' WHERE  `user_id` ".$_SESSION['user_id']." ORDER BY $orderby ASC");
+        $result = mysqli_query($conn, "SELECT * FROM  phonesdirectory ORDER BY $orderby ASC");
         $output = "";
         while ($row = mysqli_fetch_array($result)) {
             echo "<tr data-id(".$row['id'].")>

@@ -22,7 +22,7 @@ $result = mysqli_query($conn, "SELECT * FROM  phonesdirectory ");
                         </tr>";
         }
         $output .='</tbody>
-				</table> <br /><br /><br /><br /><br /><br /><br /><p style="text-align: center; padding: 10px;color: cyan;background:black;text-align: center; margin-top:10px">© Copyright By <a href="https://github.com/tauseedzaman"> Tauseed zaman :)</a></p>';
+				</table> <br /><br /><br /><br /><br /><br /><br /><p style="text-align: center; padding: 10px;color: cyan;background:black;text-align: center; margin-top:10px">© Copyright By <a href="https://github.com/mushlihun"> List Creative :)</a></p>';
 $dompdf->loadHtml($output);
 $dompdf->setPaper('A4', 'landscape');
 $dompdf->render();
